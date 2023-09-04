@@ -9,6 +9,7 @@ import CounterWithRedux from "./features/counter-with-redux/CounterWithRedux";
 import {Provider} from "react-redux";
 import store from "./app/store";
 import ContactManagerWithRedux from "./features/contact-manager-with-redux/ContactManagerWithRedux";
+import AppointmentManagerWithRedux from "./features/appointments-list-with-redux/AppointmentManagerWithRedux";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,9 @@ root.render(
       </Provider>
       <Provider store={store}>
           <ContactManagerWithRedux/>
+      </Provider>
+      <Provider store={store}>
+          <AppointmentManagerWithRedux/>
       </Provider>
   </React.StrictMode>
 );
